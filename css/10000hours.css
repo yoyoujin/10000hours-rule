@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'OTEnjoystoriesBA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2')
+      format('woff2'),
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff')
+      format('woff'),
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf')
+      format('opentype');
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: GmarketSansMedium;
+}
+
+.blind {
+  visibility: hidden;
+}
+
+body {
+  background-color: #5b2386;
+}
+
+.tit-timelaw {
+  position: relative;
+  text-align: center;
+  margin: 140px auto 125px;
+  width: 600px;
+}
+
+.tit-img {
+  width: 564px;
+  height: 112px;
+  position: relative;
+  z-index: 10;
+}
+
+.clock-img {
+  width: 261px;
+  height: 265px;
+  position: absolute;
+  top: -65%;
+  left: 29%;
+}
+
+.slogan {
+  text-align: center;
+  font-family: OTEnjoystoriesBA;
+  font-weight: 700;
+  font-size: 36px;
+  color: #f5df4d;
+}
+
+.quote {
+  text-align: center;
+  background-image: url(/img/quotes.png);
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+}
+
+.txt-desc {
+  text-align: center;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 78px auto 100px;
+}
+
+.tit-desc {
+  font-family: GmarketSansBold;
+  font-size: 24px;
+}
+
+.cont-inp {
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 80px;
+}
+
+.input-wannabe,
+.input-time {
+  font-family: inherit;
+  font-size: 24px;
+}
+
+.cont-inp input {
+  width: 148px;
+  height: 24px;
+  margin: 0 17px;
+  padding: 17px 41px 16px 39px;
+  border-radius: 7px;
+  border: 0;
+  text-align: center;
+}
+
+.btn-wrap {
+  position: relative;
+}
+
+.btn {
+  font-family: GmarketSansBold;
+  font-size: 24px;
+  color: #5b2386;
+  height: 66px;
+  background-color: #fcee21;
+  border: 0;
+  border-radius: 56px;
+}
+
+.btn-exc {
+  width: 565px;
+  margin: 100px auto 147px;
+}
+
+.click {
+  position: absolute;
+  top: 37%;
+}
+
+.cont-result {
+  text-align: center;
+  color: #ffffff;
+}
+
+.txt-wannabe,
+.txt-time {
+  font-size: 24px;
+  line-height: 80px;
+}
+
+.result-wannabe,
+.result-time {
+  font-size: 72px;
+  font-weight: 700;
+  margin: 17px 12px;
+  vertical-align: middle;
+}
+
+.btn-go {
+  width: 356px;
+  margin: 100px 0 147px;
+}
+
+.btn-share {
+  width: 191px;
+  background-color: #ffffff;
+  margin: 100px 9px 136px;
+}
+
+.cont-footer {
+  text-align: center;
+}
+
+.img-footer {
+  display: block;
+  margin: 20px auto;
+}
+
+.txt-footer {
+  text-align: center;
+  color: #ffffff;
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  line-height: 17.38px;
+  padding-bottom: 80px;
+}
+
+#cont-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 10px rgb(56, 55, 55);
+  display: none;
+}
+
+#cont-modal.active {
+  display: block;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+.modal-msg {
+  font-family: OTEnjoystoriesBA;
+  color: #5b2386;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.modal-msg strong {
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 105.6px;
+}
+
+.licat-img {
+  width: 429.96px;
+  margin-bottom: 73.16px;
+}
+
+.btn-gogo {
+  width: 508px;
+  padding: 21px 49px 21px 49px;
+  box-shadow: 0 0 8px 1px rgb(133, 130, 130);
+  font-family: GmarketSansBold;
+  font-size: 24px;
+  color: #5b2386;
+  height: 66px;
+  background-color: #fcee21;
+  border: 0;
+  border-radius: 56px;
+}
+
+@media screen and (max-width: 600px) {
+  .tit-timelaw {
+    position: relative;
+    text-align: center;
+    margin: 90px auto 70px;
+    width: 360px;
+  }
+
+  .tit-img {
+    width: 267px;
+    height: 53px;
+  }
+  .clock-img {
+    width: 125px;
+    height: 126px;
+    left: 33%;
+  }
+  .slogan {
+    font-size: 22px;
+  }
+
+  .quote {
+    text-align: center;
+    margin: 0 auto;
+    background-size: 90%;
+    background-position: 50% 50%;
+  }
+
+  .tit-desc {
+    font-size: 16px;
+  }
+
+  .txt-desc {
+    font-size: 16px;
+    line-height: 33px;
+    text-align: center;
+    margin-bottom: 62px;
+    padding: 0 20px;
+  }
+
+  .cont-inp {
+    font-size: 14px;
+    text-align: center;
+    line-height: 37px;
+    word-break: keep-all;
+  }
+
+  .input-wannabe,
+  .input-time {
+    font-size: 14px;
+  }
+
+  .cont-inp input {
+    width: 156px;
+    height: 37px;
+    margin: 0 4px;
+    padding: 12px 35px 11px 35px;
+    border-radius: 7px;
+    border: 0;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .cont-br {
+    display: block;
+  }
+
+  .btn {
+    font-size: 14px;
+    font-weight: 700;
+    color: #5b2386;
+    height: 68px;
+    background-color: #fcee21;
+    border: 0;
+    border-radius: 56px;
+  }
+
+  .btn-exc {
+    width: 241px;
+    border-radius: 13px;
+    margin: 49px auto 64px;
+    padding: 19px 36.5px 17px;
+  }
+
+  .click {
+    width: 43px;
+    top: 45%;
+    left: 73%;
+  }
+
+  .txt-wannabe,
+  .txt-time {
+    font-size: 14px;
+    line-height: 45px;
+  }
+
+  .result-wannabe,
+  .result-time {
+    font-size: 24px;
+    margin: 8px 8px;
+    vertical-align: middle;
+  }
+
+  .btn-go {
+    width: 186px;
+    height: 40px;
+    margin: 47px 6.5px 67px;
+  }
+
+  .btn-share {
+    width: 92px;
+    height: 40px;
+    background-color: #ffffff;
+    margin: 47px 6.5px 67px;
+  }
+
+  .img-footer {
+    width: 91px;
+  }
+
+  .txt-footer {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 13.03px;
+    padding-bottom: 40px;
+  }
+
+  #cont-modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: 500px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 10px rgb(56, 55, 55);
+    display: none;
+  }
+
+  .heart {
+    display: none;
+  }
+
+  .modal-msg strong {
+    font-size: 64px;
+  }
+
+  .modal-msg {
+    font-size: 36px;
+    margin-bottom: 0px;
+  }
+
+  .modal {
+    padding: 45px;
+  }
+
+  .licat-img {
+    width: 250px;
+    margin-bottom: 73.16px;
+  }
+}
